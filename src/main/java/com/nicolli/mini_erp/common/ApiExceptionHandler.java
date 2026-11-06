@@ -19,7 +19,7 @@ public class ApiExceptionHandler {
 
     @ExceptionHandler(RegraDeNegocioException.class)
     public ProblemDetail regraDeNegocio(RegraDeNegocioException ex) {
-        return ProblemDetail.forStatusAndDetail(HttpStatus.UNPROCESSABLE_ENTITY, ex.getMessage());
+        return ProblemDetail.forStatusAndDetail(HttpStatus.UNPROCESSABLE_CONTENT, ex.getMessage());
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
